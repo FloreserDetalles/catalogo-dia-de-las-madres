@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Detalles para Mamá</title>
+  <title>Floreser Detalles</title>
 
   <style>
     body {
@@ -17,16 +17,27 @@
       padding: 20px;
     }
 
+    h1 {
+      margin: 0;
+    }
+
+    .contenedor {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
     .producto {
       background: white;
-      margin: 20px;
+      margin: 15px;
       padding: 15px;
       border-radius: 10px;
+      width: 250px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
     img {
-      width: 200px;
+      width: 100%;
       border-radius: 10px;
     }
 
@@ -36,6 +47,7 @@
       border: none;
       padding: 10px;
       border-radius: 5px;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -43,34 +55,43 @@
 <body>
 
 <header>
-  <h1>Detalles para Mamá 💖</h1>
+  <h1>Floreser Detalles 💐</h1>
   <p>Haz tu pedido por WhatsApp</p>
 </header>
 
-<div class="producto">
-  <img src="<img src="19.jpg">">
-  <h3>Ramo de girasoles</h3>
-  <p>$45.000</p>
-  <p>Incluye flores frescas + envoltura elegante</p>
+<div class="contenedor">
 
-  <a href="https://wa.me/573247029744?text=Hola%20quiero%20el%20ramo%20de%20girasoles" target="_blank">
-    <button>Comprar</button>
-  </a>
-</div>
+  <div class="producto">
+    <img src="./01.jpg">
+    <h3>Ramo de girasoles</h3>
+    <p>Desde $45.000</p>
+    <a href="https://wa.me/573247029744?text=Hola%20quiero%20el%20ramo%20de%20girasoles" target="_blank">
+      <button>Comprar</button>
+    </a>
+  </div>
 
-<div class="producto">
-  <img src="<img src="19.jpg">>
-  <h3>Caja sorpresa para mamá</h3>
-  <p>$80.000</p>
-  <p>Incluye detalles personalizados</p>
+  <div class="producto">
+    <img src="./02.jpg">
+    <h3>Caja sorpresa para mamá</h3>
+    <p>Desde $80.000</p>
+    <a href="https://wa.me/573247029744?text=Hola%20quiero%20la%20caja%20para%20mamá" target="_blank">
+      <button>Comprar</button>
+    </a>
+  </div>
 
-  <a href="https://wa.me/57573247029744?text=Hola%20quiero%20la%20caja%20para%20mamá" target="_blank">
-    <button>Comprar</button>
-  </a>
+  <div class="producto">
+    <img src="./03.jpg">
+    <h3>Ramo personalizado</h3>
+    <p>Base $12.000 + flores</p>
+    <a href="https://wa.me/573247029744?text=Hola%20quiero%20armar%20un%20ramo" target="_blank">
+      <button>Armar ramo</button>
+    </a>
+  </div>
+
 </div>
 
 <!-- Botón flotante -->
-<a href="https://wa.me/57573247029744" target="_blank"
+<a href="https://wa.me/573247029744" target="_blank"
 style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px;border-radius:50%;text-decoration:none;">
 💬
 </a>
