@@ -1,77 +1,117 @@
-import React from 'react';
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Floreser Detalles</title>
 
-// Generamos la lista de imágenes (del 00 al 19 según tus activos)
-const productos = Array.from({ length: 20 }, (_, i) => ({
-  id: i,
-  // Asegúrate de que los archivos en /public se llamen exactamente así (ej: 00.jpg)
-  img: /${i.toString().padStart(2, '0')}.jpg 
-}));
+  <style>
+    body {
+      font-family: Arial;
+      margin: 0;
+      background: #fff8f5;
+      text-align: center;
+    }
 
-const App = () => {
-  const whatsappNumber = "573247029744";
-  const instagramUser = "Floreser_Detalles_";
+    header {
+      background: #ffe4e1;
+      padding: 20px;
+    }
 
-  return (
-    <div style={{ backgroundColor: '#fff5f7', minHeight: '100vh', fontFamily: 'sans-serif' }}>
-      {/* Encabezado Premium */}
-      <header style={{ textAlign: 'center', padding: '40px 20px', backgroundColor: '#fff' }}>
-        <h1 style={{ color: '#d4af37', fontSize: '2.5rem', margin: 0 }}>Catálogo Exclusivo</h1>
-        <p style={{ color: '#888', textTransform: 'uppercase', letterSpacing: '2px' }}>Diseño y Detalle</p>
-      </header>
+    h2 {
+      margin-top: 40px;
+    }
 
-      {/* Galería de Productos */}
-      <main style={{ 
-        display: 'grid', 
-        gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', 
-        gap: '15px', 
-        padding: '20px',
-        maxWidth: '1200px',
-        margin: '0 auto'
-      }}>
-        {productos.map((prod) => (
-          <div key={prod.id} style={{ 
-            borderRadius: '12px', 
-            overflow: 'hidden', 
-            boxShadow: '0 4px 15px rgba(0,0,0,0.05)',
-            backgroundColor: '#fff'
-          }}>
-            <img 
-              src={prod.img} 
-              alt={Producto ${prod.id}}
-              style={{ width: '100%', height: '350px', objectFit: 'cover', display: 'block' }}
-              onError={(e) => { e.target.src = 'https://via.placeholder.com/350x450?text=Cargando...'; }}
-            />
-          </div>
-        ))}
-      </main>
+    .contenedor {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-      {/* Pie de página con contacto directo */}
-      <footer style={{ textAlign: 'center', padding: '40px', backgroundColor: '#fff', marginTop: '50px' }}>
-        <div style={{ marginBottom: '20px' }}>
-          <a 
-            href={https://wa.me/${whatsappNumber}} 
-            style={{ 
-              backgroundColor: '#25D366', 
-              color: 'white', 
-              padding: '12px 25px', 
-              borderRadius: '25px', 
-              textDecoration: 'none',
-              fontWeight: 'bold',
-              marginRight: '10px'
-            }}
-          >
-            WhatsApp Pedidos
-          </a>
-          <a 
-            href={https://instagram.com/${instagramUser}} 
-            style={{ color: '#c13584', fontWeight: 'bold', textDecoration: 'none' }}
-          >
-            @{instagramUser}
-          </a>
-        </div>
-      </footer>
-    </div>
-  );
-};
+    .producto {
+      background: white;
+      margin: 15px;
+      padding: 15px;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
 
-export default App;
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    button {
+      background: #25D366;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Floreser Detalles 💐</h1>
+  <p>Haz tu pedido por WhatsApp</p>
+</header>
+
+<!-- RAMOS -->
+<h2>💐 Ramos</h2>
+<div class="contenedor">
+  <div class="producto">
+    <img src="./35.jpg">
+    <h3>Ramo de girasoles</h3>
+    <p>Desde $35.000</p>
+    <a href="https://wa.me/573247029744?text=Hola%20quiero%20un%20ramo%20de%20girasoles">
+      <button>Comprar</button>
+    </a>
+  </div>
+
+  <div class="producto">
+    <img src="./36.jpg">
+    <h3>Ramo de rosas</h3>
+    <p>Desde $40.000</p>
+    <a href="https://wa.me/573247029744?text=Hola%20quiero%20un%20ramo%20de%20rosas">
+      <button>Comprar</button>
+    </a>
+  </div>
+</div>
+
+<!-- MUGS -->
+<h2>☕ Mugs personalizados</h2>
+<div class="contenedor">
+  <div class="producto">
+    <img src="./19.jpg">
+    <h3>Mug personalizado</h3>
+    <p>Desde $12.000</p>
+    <a href="https://wa.me/573247029744?text=Hola%20quiero%20un%20mug">
+      <button>Comprar</button>
+    </a>
+  </div>
+</div>
+
+<!-- ANCHETAS -->
+<h2>🎁 Anchetas</h2>
+<div class="contenedor">
+  <div class="producto">
+    <img src="./20.jpg">
+    <h3>Ancheta personalizada</h3>
+    <p>Desde $70.000</p>
+    <a href="https://wa.me/573247029744?text=Hola%20quiero%20una%20ancheta">
+      <button>Comprar</button>
+    </a>
+  </div>
+</div>
+
+<!-- BOTÓN WHATSAPP -->
+<a href="https://wa.me/573247029744" target="_blank"
+style="position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:15px;border-radius:50%;text-decoration:none;">
+💬
+</a>
+
+</body>
+</html>
